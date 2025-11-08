@@ -72,9 +72,9 @@ const BestSeller = () => {
                   {product.details}
                 </p>
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-base sm:text-md font-bold text-gray-900">
+                  {/* <span className="text-base sm:text-md font-bold text-gray-900">
                     {product.price}
-                  </span>
+                  </span> */}
                   <a
                     href={product.link}
                     className="border-b-1 text-black text-sm font-medium tracking-wide hover:bg-gray-100 transition-colors duration-300"

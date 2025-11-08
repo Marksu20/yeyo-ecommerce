@@ -4,6 +4,7 @@ import InspireSection from '../components/InspireSection'
 import SecondBanner from '../components/SecondBanner'
 import BestSeller from '../components/BestSeller'
 import QuickLinks from '../components/QuickLinks'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <InspireSection />
       <SecondBanner />
       <BestSeller />
-      <QuickLinks />
+      {/* <QuickLinks /> */}
+      <Footer />
     </>
   )
 }
