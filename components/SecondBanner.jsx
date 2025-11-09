@@ -51,7 +51,7 @@ const SecondBanner = () => {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Banner Container */}
-      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px]">
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px]">
         {/* Background Image - Desktop */}
         <div 
           className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700"
