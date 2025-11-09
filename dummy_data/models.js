@@ -1,0 +1,30 @@
+export default [
+  {
+    id: 1,
+    img: {
+      src: '../image_models/model.avif',
+      alt: 'Model portrait 1'
+    }
+  },
+  {
+    id: 2,
+    img: {
+      src: '../image_models/model.avif',
+      alt: 'Model portrait 2'
+    }
+  },
+  {
+    id: 3,
+    img: {
+      src: '../image_models/model.avif',
+      alt: 'Model portrait 2'
+    }
+  },
+  {
+    id: 4,
+    img: {
+      src: '../image_models/model.avif',
+      alt: 'Model portrait 2'
+    }
+  }
+]

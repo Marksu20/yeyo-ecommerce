@@ -1,24 +1,15 @@
-import React from 'react'
+import models from '../dummy_data/models.js';
+import ModelEntry from './ModelEntry';
 
 const InspireSection = () => {
-  const looks = [
-    {
-      id: 1,
-      image: '../image_models/model.avif'
-    },
-    {
-      id: 2,
-      image: '../image_models/model.avif'
-    },
-    {
-      id: 3,
-      image: '../image_models/model.avif'
-    },
-    {
-      id: 4,
-      image: '../image_models/model.avif'
-    }
-  ]
+  const modelEntryElements = models.map((model) => {
+    return (
+      <ModelEntry 
+        key={model.id}
+        {...model} 
+      />
+    )
+  })
 
   return (
     <section className="w-full bg-white py-2 sm:py-6 lg:py-10">
@@ -31,21 +22,7 @@ const InspireSection = () => {
 
         {/* md:grid-cols-2 xl:grid-cols-4 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-4">
-          {looks.map((look) => (
-            <div
-              key={look.id}
-              className="relative overflow-hidden w-full" 
-            >
-            
-              <img
-                src={look.image}
-                alt="Model portrait"
-                className="h-full w-full object-contain bg-gray-50"
-                loading="lazy"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-          ))}
+          {modelEntryElements}
         </div>
       </div>
     </section>
