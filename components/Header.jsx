@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="w-full border-b border-gray-200">
       {/* Top announcement bar */}
-      <div className="w-full bg-black text-white text-xs sm:text-sm py-2 text-center tracking-wide font-bold">
+      <div className="w-full bg-black text-white text-xs md:text-xs lg:text-md py-2 text-center tracking-wide font-bold">
         11.11 SALE IS LIVE! UP TO 50% OFF SITEWIDE. SHOP NOW!
       </div>
 
@@ -27,7 +27,7 @@ const Header = () => {
           </div>
 
           {/* Nav */}
-          <nav className="flex-1 flex items-center justify-center ml-[20%]">
+          <nav className="flex-1 flex items-center justify-center ml-[20%] md:ml-[15%]">
             <ul className="flex items-center gap-8 text-sm font-sm">
               <li><a className="hover:border-b-2 border-black py-2 transition-opacity font-semibold" href="#">SHOES</a></li>
               <li><a className="hover:border-b-2 border-black py-2 transition-opacity font-semibold" href="#">MEN</a></li>
