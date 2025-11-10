@@ -51,17 +51,17 @@ const Header = () => {
 
             {/* Profile */}
             <button aria-label="Profile" className="p-2 hover:bg-gray-200 rounded-full">
-              <PiFinnTheHumanFill className="w-7 h-7"/>
+              <PiFinnTheHumanFill className="w-7 h-7 md:w-6 md:h-6"/>
             </button>
 
             {/* Hearts */}
             <button aria-label="Wishlist" className="p-2 hover:bg-gray-200 rounded-full">
-              <GiMineralHeart className="w-7 h-7"/>
+              <GiMineralHeart className="w-7 h-7 md:w-6 md:h-6"/>
             </button>
               
             {/* Cart */}
             <button aria-label="Cart" className="p-2 hover:bg-gray-200 rounded-full">
-              <TbShoppingCartPlus className="w-7 h-7"/>
+              <TbShoppingCartPlus className="w-7 h-7 md:w-6 md:h-6"/>
             </button>
         
           </div>

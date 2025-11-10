@@ -25,7 +25,7 @@ export default function HotEntry(props) {
           </span> */}
           <a
             href={props.link}
-            className="border-b-1 text-black text-sm font-medium tracking-wide hover:bg-gray-100 transition-colors duration-300"
+            className="border-b-1 text-black text-sm md:text-xs font-medium tracking-wide hover:bg-gray-100 transition-colors duration-300"
           >
             Shop Now
           </a>

@@ -12,10 +12,10 @@ const BestSeller = () => {
 
   return (
     <section className="w-full bg-white py-2 sm:py-6 lg:py-10">
-      <div className="max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[80%] md:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-2 sm:mb-2 lg:mb-4">
-          <h2 className="text-md sm:text-xl lg:text-2xl font-bold text-gray-900 leading-tight text-center">
+          <h2 className="text-md sm:text-xl md:text-lg lg:text-xl font-bold text-gray-900 leading-tight text-center">
             WHAT'S HOT
           </h2>
         </div>
