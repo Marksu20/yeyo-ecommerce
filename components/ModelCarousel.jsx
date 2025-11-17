@@ -1,83 +1,46 @@
-import { useRef, useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-export default function Carousel({ items = [], visible = 4, renderItem }) {
-  const scrollerRef = useRef(null);
-  const [canScroll, setCanScroll] = useState(false);
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
+import 'swiper/css/pagination';
 
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-    const update = () => {
-      // allow controls only when total items exceed visible slots
-      setCanScroll(items.length > visible && el.scrollWidth > el.clientWidth + 1);
-    };
+import models from '../dummy_data/models.js';
+import ModelEntry from './ModelEntry';
 
-    update();
-    window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
-  }, [items.length, visible]);
 
-  const getSlideWidth = () => {
-    const el = scrollerRef.current;
-    if (!el) return 0;
-    const first = el.querySelector('[data-slide]');
-    return first ? first.offsetWidth : Math.floor(el.clientWidth / visible);
-  };
-
-  const scrollBySlides = (dir = 1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const step = getSlideWidth();
-    el.scrollBy({ left: dir * step, behavior: 'smooth' });
-  };
+export default function ModelCarousel() {
+  const modelEntryElements = models.map((model) => {
+    return (
+      <SwiperSlide >
+        <ModelEntry 
+          key={model.id}
+          {...model} 
+        />  
+      </SwiperSlide>
+    )
+  });
 
   return (
-    <div className="relative">
-      {canScroll && (
-        <button
-          aria-label="Previous"
-          onClick={() => scrollBySlides(-1)}
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 bg-white/90 text-black rounded-full shadow-md hover:bg-white"
-        >
-          ‹
-        </button>
-      )}
-
-      <div
-        ref={scrollerRef}
-        className="flex overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory gap-2"
-        style={{ WebkitOverflowScrolling: 'touch' }}
+    <>
+      <Swiper
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }}
+        lazy={true}
+        slidesPerView={3}
+        spaceBetween={5}
+        // pagination={{ clickable: true }}
+        navigation={true}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        modules={[Navigation, Pagination, Autoplay]}
+        className="mySwiper"
       >
-        {items.map((item, idx) => (
-          <div
-            data-slide
-            key={item.id ?? idx}
-            className="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 snap-start"
-          >
-            {renderItem ? (
-              renderItem(item, idx)
-            ) : (
-              <img
-                src={item.src ?? item.img?.src}
-                alt={item.alt ?? item.img?.alt ?? ''}
-                className="w-full h-full object-contain bg-gray-50"
-                loading="lazy"
-              />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {canScroll && (
-        <button
-          aria-label="Next"
-          onClick={() => scrollBySlides(1)}
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-10 h-10 bg-white/90 text-black rounded-full shadow-md hover:bg-white"
-        >
-          ›
-        </button>
-      )}
-    </div>
+        {modelEntryElements}
+      </Swiper>
+    </>
   );
 }
