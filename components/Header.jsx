@@ -12,8 +12,9 @@ const Header = () => {
   return (
     <header className="w-full border-b border-gray-200">
       {/* Top announcement bar */}
-      <div className="w-full bg-black text-white text-xs md:text-xs lg:text-md py-2 text-center tracking-wide font-bold">
-        11.11 SALE IS LIVE! UP TO 50% OFF SITEWIDE. SHOP NOW!
+      <div className="w-full bg-black text-white py-2 text-center tracking-wide text-xs md:text-xs lg:text-md">
+        11.11 SALE IS LIVE! UP TO 50% OFF SITEWIDE. SHOP NOW!  
+        <span className="hidden sm:inline-block">&nbsp;sm</span>
       </div>
 
       {/* Main header */}

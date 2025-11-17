@@ -49,8 +49,7 @@ const Banner = () => {
   const currentBanner = bannerData[currentSlide]
 
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Banner Container */}
+    <section className="relative w-full overflow-hidden mb-5 sm:mb-2">
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px]">
         {/* Background Image - Desktop */}
         <div 
