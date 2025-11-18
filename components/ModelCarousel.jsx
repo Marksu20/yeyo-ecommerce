@@ -10,7 +10,6 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import models from '../dummy_data/models.js';
 import ModelEntry from './ModelEntry';
 
-
 export default function ModelCarousel() {
   const modelEntryElements = models.map((model) => {
     return (
