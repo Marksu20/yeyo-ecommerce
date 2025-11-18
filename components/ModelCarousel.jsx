@@ -14,7 +14,7 @@ import ModelEntry from './ModelEntry';
 export default function ModelCarousel() {
   const modelEntryElements = models.map((model) => {
     return (
-      <SwiperSlide >
+      <SwiperSlide>
         <ModelEntry 
           key={model.id}
           {...model} 
@@ -23,12 +23,13 @@ export default function ModelCarousel() {
     )
   });
 
+  // TODO: customize navigation buttons
   return (
     <>
       <Swiper
         style={{
           '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
+          '--swiper-navigation-size': '25px'
         }}
         lazy={true}
         slidesPerView={3}
