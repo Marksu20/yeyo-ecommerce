@@ -9,7 +9,7 @@ export default [
   {
     id: 2,
     img: {
-      src: '../image_models/model.avif',
+      src: '../image_models/model2.jpg',
       alt: 'Model portrait 2'
     }
   },

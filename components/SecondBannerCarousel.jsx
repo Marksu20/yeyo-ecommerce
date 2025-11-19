@@ -7,13 +7,13 @@ import 'swiper/css/navigation';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import bannerData from '../dummy_data/bannerData.js';
-import BannerCarouselEntry from './BannerCarouselEntry';
+import SecondBannerCarouselEntry from './BannerCarouselEntry';
 
-export default function BannerCarousel() {
-  const BannerCarouselEntryElements = bannerData.slice(0, 4).map((banner) => {
+export default function SecondBannerCarousel() {
+  const SecondBannerCarouselEntryElements = bannerData.slice(0, 4).map((banner) => {
       return (
         <SwiperSlide>
-          <BannerCarouselEntry 
+          <SecondBannerCarouselEntry
             key={banner.id}
             {...banner} 
           />  
@@ -23,7 +23,7 @@ export default function BannerCarousel() {
   
   return (
     <>
-      <section className="relative w-full overflow-hidden mb-2">
+      <section className="relative w-full overflow-hidden">
         <Swiper
           style={{
             '--swiper-pagination-color': '#fff',
@@ -35,7 +35,7 @@ export default function BannerCarousel() {
           modules={[Pagination, Autoplay]} 
           className="mySwiper"
         >
-          {BannerCarouselEntryElements}
+          {SecondBannerCarouselEntryElements}
         </Swiper>
 
       </section>

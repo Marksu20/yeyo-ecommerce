@@ -3,6 +3,8 @@ import Banner from '../components/Banner'
 import BannerCarousel from '../components/BannerCarousel'
 import InspireSection from '../components/InspireSection'
 import SecondBanner from '../components/SecondBanner'
+import SecondBannerCarousel from '../components/SecondBannerCarousel'
+import AdContainer from '../components/AdContainer'
 import BestSeller from '../components/BestSeller'
 import QuickLinks from '../components/QuickLinks'
 import Footer from '../components/Footer'
@@ -11,12 +13,12 @@ const Home = () => {
   return (
     <>
       <Header />
-      {/* <Banner /> */}
       <BannerCarousel />
+      <AdContainer />
       <InspireSection />
-      <SecondBanner />
+      <SecondBannerCarousel />
+      <AdContainer />
       <BestSeller />
-      {/* <QuickLinks /> */}
       <Footer />
     </>
   )

@@ -1,4 +1,4 @@
-const BannerCarouselEntry = (props) => {
+export default function SecondBannerCarouselEntry (props) {
   return (
     <div className="relative w-full h-[100%] md:h-[500px] lg:h-[700px]">
       <img
@@ -10,5 +10,3 @@ const BannerCarouselEntry = (props) => {
     </div>
   )
 }
-
-export default BannerCarouselEntry
