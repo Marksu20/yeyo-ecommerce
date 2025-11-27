@@ -1,6 +1,76 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/grid';
+import 'swiper/css/pagination';
+import { FaPhoneAlt } from "react-icons/fa";
+
+
+import { Grid } from 'swiper/modules';
+
+// TODO: refactor the footer(responsiveness)
+
 const Footer = () => {
   return (
     <footer className="bg-black w-full py-2 px-10 pt-5 sm:px-6 pt-12 pb-6">
+      <Swiper
+        slidesPerView={2}
+        spaceBetween={20}
+        grid={{
+          rows: 2,
+          fill: 'row',
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Grid]}
+        className="mySwiper mb-10"
+      >
+        <SwiperSlide>
+          <div className="flex flex-col items-center justify-center space-y-3 text-white py-5 border">
+            <FaPhoneAlt size={30}/>
+            <p>Contact Us</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col items-center justify-center space-y-3 text-white py-5 border">
+            <FaPhoneAlt size={30}/>
+            <p>Store Finder</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col items-center justify-center space-y-3 text-white py-5 border">
+            <FaPhoneAlt size={30}/>
+            <p>Shipping Info</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col items-center justify-center space-y-3 text-white py-5 border">
+            <FaPhoneAlt size={30}/>
+            <p>FAQs</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
         <div className="space-y-6">
           <p className="text-sm text-white font-bold">RESOURCES</p>

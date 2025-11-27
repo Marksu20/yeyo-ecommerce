@@ -10,7 +10,8 @@ export default function BestSellerEntry(props) {
       />
       <div>
         <span className="text-sm font-bold text-gray-900">P100</span> <br />
-        <span className="text-sm text-gray-600">Item Name</span>
+        <span className="text-sm text-gray-600">Item Name</span> <br />
+        <span className="text-sm text-gray-600">Brand</span>
       </div>
     </div>
   )

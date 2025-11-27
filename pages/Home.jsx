@@ -6,6 +6,7 @@ import SecondBanner from '../components/SecondBanner'
 import SecondBannerCarousel from '../components/SecondBannerCarousel'
 import AdContainer from '../components/AdContainer'
 import BestSeller from '../components/BestSeller'
+import ProductsList from '../components/ProductsList'
 import QuickLinks from '../components/QuickLinks'
 import Footer from '../components/Footer'
 
@@ -18,7 +19,7 @@ const Home = () => {
       <InspireSection />
       <SecondBannerCarousel />
       <AdContainer />
-      <BestSeller />
+      <ProductsList />
       <Footer />
     </>
   )

@@ -108,3 +108,5 @@ export default function ModelCarousel() {
     </>
   );
 }
+
+//TODO: 11/20 Optimize items entry, footer optomize, optimize swiper in model carousel
