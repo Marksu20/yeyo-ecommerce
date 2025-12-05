@@ -1,106 +1,120 @@
-import React from 'react'
+import { GoHeart } from "react-icons/go";
 
 export default function ProductList() {
   return (
     <div class="bg-white">
-      <div class="mx-auto max-w-2xl py-8 lg:max-w-7xl lg:px-8">
+      <div class="w-full py-8 lg:max-w-7xl lg:px-8">
         <h2 class="text-2xl text-center pb-4 font-bold text-gray-900">WHAT'S HOT</h2>
-        <div class="mt-6 grid grid-cols-2 gap-x-2 gap-y-8 lg:grid-cols-4">
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" 
-                 alt="Front of men&#039;s Basic Tee in black." 
-                 class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" 
-            />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Basic Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Black</p>
+        <div class="mt-6 grid grid-cols-2 gap-4 mx-5 lg:grid-cols-4">
+
+          {/* product entry */}
+          <div className="card bg-base-100 w-full shadow-sm">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes" />
+            </figure>
+            <div className="card-body">
+              <div className="card-title justify-between">
+                <div>Card Title 
+                  <span className="badge badge-xs badge-secondary ml-1">NEW</span>
+                </div>
+                <div>
+                  <GoHeart style={{ fontSize: "30px" }}/>
+                </div>
               </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
+              <span className="card-category text-gray-600 text-sm text-bold tracking-tight">Card Category</span>
+              <p className="leading-relaxed">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions flex-col gap-0">
+                <span className="text-lg font-bold tracking-tight text-red-500">₱ 1,000</span>
+                <span className="text-gray-600 justify-end"> ₱ 2,000 Original Price 
+                  <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-semibold text-red-500 ml-2">50% OFF</span>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg" alt="Front of men&#039;s Basic Tee in white." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Basic Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Aspen White</p>
+
+          <div className="card bg-base-100 w-full shadow-sm">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes" />
+            </figure>
+            <div className="card-body">
+              <div className="card-title justify-between">
+                <div>Card Title 
+                  <span className="badge badge-xs badge-secondary ml-1">NEW</span>
+                </div>
+                <div>
+                  <GoHeart style={{ fontSize: "30px" }}/>
+                </div>
               </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
+              <p className="leading-relaxed">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions flex-col gap-0">
+                <span className="text-lg font-bold tracking-tight text-red-500">₱ 1,000</span>
+                <span className="text-gray-600 justify-end"> ₱ 2,000 Original Price 
+                  <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-semibold text-red-500 ml-2">50% OFF</span>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg" alt="Front of men&#039;s Basic Tee in dark gray." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Basic Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Charcoal</p>
+
+          <div className="card bg-base-100 w-full shadow-sm">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes" />
+            </figure>
+            <div className="card-body">
+              <div className="card-title justify-between">
+                <div>Card Title 
+                  <span className="badge badge-xs badge-secondary ml-1">NEW</span>
+                </div>
+                <div>
+                  <GoHeart style={{ fontSize: "30px" }}/>
+                </div>
               </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
+              <span className="card-category text-gray-600 text-sm text-bold tracking-tight">Card Category</span>
+              <p className="leading-relaxed">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions flex-col gap-0">
+                <span className="text-lg font-bold tracking-tight text-red-500">₱ 1,000</span>
+                <span className="text-gray-600 justify-end"> ₱ 2,000 Original Price 
+                  <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-semibold text-red-500 ml-2">50% OFF</span>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg" alt="Front of men&#039;s Artwork Tee in peach with white and brown dots forming an isometric cube." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Artwork Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Iso Dots</p>
+
+          <div className="card bg-base-100 w-full shadow-sm">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes" />
+            </figure>
+            <div className="card-body">
+              <div className="card-title justify-between">
+                <div>Card Title 
+                  <span className="badge badge-xs badge-secondary ml-1">NEW</span>
+                </div>
+                <div>
+                  <GoHeart style={{ fontSize: "30px" }}/>
+                </div>
               </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
+              <p className="leading-relaxed">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions flex-col gap-0">
+                <span className="text-lg font-bold tracking-tight text-red-500">₱ 1,000</span>
+                <span className="text-gray-600 justify-end"> ₱ 2,000 Original Price 
+                  <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-semibold text-red-500 ml-2">50% OFF</span>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg" alt="Front of men&#039;s Basic Tee in dark gray." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Basic Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Charcoal</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
-            </div>
-          </div>
-          <div class="group relative">
-            <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg" alt="Front of men&#039;s Artwork Tee in peach with white and brown dots forming an isometric cube." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Artwork Tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Iso Dots</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">$35</p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
   )
 }
+
+// * heart icon should only appear when user is logged in (for future arrangements)
+

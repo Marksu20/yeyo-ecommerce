@@ -14,7 +14,7 @@ const Header = () => {
       {/* Top announcement bar */}
       <div className="w-full bg-black text-white py-2 text-center tracking-wide text-xs md:text-xs lg:text-md">
         11.11 SALE IS LIVE! UP TO 50% OFF SITEWIDE. SHOP NOW!  
-        <span className="hidden md:inline-block">&nbsp;md</span>
+        <span className="hidden sm:inline-block">&nbsp;sm</span>
       </div>
 
       {/* Main header */}
